@@ -781,6 +781,15 @@ td, th {
   font-size: 24px;
 }
 
+.submit_btn{
+  color: white;
+  background-color: #df003a;
+  font-size: 15px;
+  height: 40px;
+  width: 90px;
+  border: none !important;
+}
+
 b, sup, sub, u, del {
   color: #df003a;
 }
@@ -1250,13 +1259,15 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 40px;
   border: none;
   outline: none;
-  background: #f9f9ff;
+  background: #EEEEEE;
   padding: 0 20px;
 }
 
 .single-input:focus {
   outline: none;
 }
+
+
 
 .input-group-icon {
   position: relative;
@@ -1284,7 +1295,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 40px;
   border: none;
   outline: none;
-  background: #f9f9ff;
+  background: #EEEEEE;
   padding: 0 20px;
   height: 100px;
   resize: none;
