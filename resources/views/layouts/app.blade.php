@@ -45,15 +45,15 @@
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
-                            <li><a class="nav-link" href="{{ route('register') }}">Parametres</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">Messages</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">Abonnes</a></li>
-
+                            <li><a class="nav-link" href="{{ route('home') }}">Autres</a></li>
+                            <li><a class="nav-link" href="{{ route('services') }}">Services</a></li>
+                            <li><a class="nav-link" href="{{ route('messages') }}">Messages</a></li>
+                            <li><a class="nav-link" href="{{ route('produits') }}">Produits</a></li>
+                            <li><a class="nav-link" href="{{ route('abonnes') }}">Abonnes</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
