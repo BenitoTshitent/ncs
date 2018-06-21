@@ -46,19 +46,19 @@
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Titre</label>
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                                    <input id="titre" type="text" class="form-control" name="titre" value="" required autofocus>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Description</label>
                                 <div class="col-md-6">
-                                    <textarea id="name" type="text" class="form-control" name="name"></textarea>
+                                    <textarea id="description" type="text" class="form-control" name="description"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Icon</label>
                                 <div class="col-md-6">
-                                    <input id="name" type="file" class="form-control" name="name" value="" required >
+                                    <input id="icon" type="file" class="form-control" name="icon" value="" required >
                                 </div>
                             </div>
                             <div class="form-group row mb-0">

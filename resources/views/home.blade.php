@@ -15,23 +15,22 @@
                     @endif
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
-
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Texte primaire</label>
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                                    <input id="primeTextAcc" type="text" class="form-control" name="primeTextAcc" value="" required autofocus>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Texte secondaire</label>
                                 <div class="col-md-6">
-                                     <textarea id="name" type="text" class="form-control" name="name"></textarea>
+                                     <textarea id="secTextAcc" type="text" class="form-control" name="secTextAcc"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Image </label>
                                 <div class="col-md-6">
-                                    <input id="name" type="file" class="form-control" name="name" value="" required >
+                                    <input id="ImageAcc" type="file" class="form-control" name="ImageAcc" value="" required >
                                 </div>
                             </div>
                             <div class="form-group row mb-0">
@@ -58,19 +57,19 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Image de fond</label>
                             <div class="col-md-6">
-                                <input id="name" type="file" class="form-control" name="name" value="" required >
+                                <input id="imagefdApp" type="file" class="form-control" name="imagefdApp" value="" required >
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Entete</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                                <input id="enteteTextApp" type="text" class="form-control" name="enteteTextApp" value="" required autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Description</label>
                             <div class="col-md-6">
-                                <textarea id="name" type="text" class="form-control" name="name"></textarea>
+                                <textarea id="descTextApp" type="text" class="form-control" name="descTextApp"></textarea>
                             </div>
                         </div>
                         <div class="form-group row mb-0">
@@ -98,19 +97,19 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Adresse mail</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                                <input id="emailTextContact" type="text" class="form-control" name="emailTextContact" value="" required autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Numero 1</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="" required>
+                                <input id="num1TextContact" type="text" class="form-control" name="num1TextContact" value="" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Numero 2</label>
                             <div class="col-md-6">
-                                <input id="name" type="file" class="form-control" name="name" value="" required >
+                                <input id="num2TextContact" type="file" class="form-control" name="num2TextContact" value="" required >
                             </div>
                         </div>
                         <div class="form-group row mb-0">
@@ -138,19 +137,19 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right"> Numero, Avenue</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                                <input id="numAvenenue" type="text" class="form-control" name="numAvenenue" value="" required autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Ville, Commune</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="" required>
+                                <input id="villeCommune" type="text" class="form-control" name="villeCommune" value="" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Pays, Province</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="" required >
+                                <input id="paysProv" type="text" class="form-control" name="paysProv" value="" required >
                             </div>
                         </div>
                         <div class="form-group row mb-0">
@@ -178,19 +177,19 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">FaceBook</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                                <input id="facebook" type="text" class="form-control" name="facebook" value="" required autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Twitter</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="" required>
+                                <input id="twitter" type="text" class="form-control" name="twitter" value="" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Intagram</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="" required >
+                                <input id="instagram" type="text" class="form-control" name="instagram" value="" required >
                             </div>
                         </div>
                         <div class="form-group row mb-0">
