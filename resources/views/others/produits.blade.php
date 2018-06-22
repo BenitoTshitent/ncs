@@ -56,6 +56,12 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">Titre</label>
+                                <div class="col-md-6">
+                                    <input id="lien" type="text" class="form-control" name="lien" value="" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Description</label>
                                 <div class="col-md-6">
                                     <textarea id="description" type="text" class="form-control" name="description"></textarea>
