@@ -13,24 +13,25 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
-Route::get('/abonnes', function () {
-    return view('others.abonnes');
-})->name('abonnes');
+Route::get('/abonnes','AbonnesController@index')->name('abonnes');
+Route::get('/abonnes/{id}','AbonnesController@destroy')->name('destroyAbonne');
+Route::post('/newLetter','AbonnesController@store')->name('newLetter');
 
-Route::get('/messages', function () {
-    return view('others.messages');
-})->name('messages');
+Route::get('/messages','MessagesController@index')->name('messages');
+Route::get('/messages/{id}','MessagesController@destroy')->name('destroyMessage');
+Route::post('/','MessagesController@store');
 
-Route::get('/produits', function () {
-    return view('others.produits');
-})->name('produits');
+Route::get('/produits','ProduitsController@index')->name('produits');
+Route::get('/newproduct','ProduitsController@store');
+Route::get('/produits/{id}','ProduitsController@destroy')->name('destroyProduit');
 
-Route::get('/services', function () {
-    return view('others.services');
-})->name('services');
+Route::get('/services', 'ServicesController@index')->name('services');
+Route::get('/newservice','ServicesController@store');
+Route::get('/services/{id}','ServicesController@destroy')->name('destroyService');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home', 'HomeController@store')->name('home');

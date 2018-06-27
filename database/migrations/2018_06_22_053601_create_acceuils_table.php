@@ -15,6 +15,7 @@ class CreateAcceuilsTable extends Migration
     {
         Schema::create('acceuils', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('logo');
             $table->string('primeTextAcc');
             $table->string('secTextAcc');
             $table->string('ImageAccUrl');

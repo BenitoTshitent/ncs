@@ -183,23 +183,23 @@
                         <div class="col-lg-2 col-md-2"></div>
                         <div class="col-lg-8 col-md-8">
                             <h3 class="mb-30">Contacter nous</h3>
-                            <form action="#">
+                            <form action="" method="post">
+                                @csrf
                                 <div class="mt-10">
-                                    <input type="text" name="nomEntite" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
+                                    <input type="text" name="nomEntite" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nom de lEntite'" required class="single-input">
                                 </div>
                                 <div class="mt-10">
-                                    <input type="text" name="emailEntite" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+                                    <input type="email" name="emailEntite" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'adesse mail'" required class="single-input">
                                 </div>
                                 <div class="mt-10">
-                                    <input type="text" name="PhoneEntite" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required class="single-input">
+                                    <input type="text" name="PhoneEntite" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'phone'" required class="single-input">
                                 </div>
                                 <div class="mt-10">
-                                    <input type="email" name="sujetEntite" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required class="single-input">
+                                    <input type="text" name="sujetEntite" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'sujet'" required class="single-input">
                                 </div>
                                 <div class="mt-10">
-                                    <textarea name="contenu" class="single-textarea" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
+                                    <textarea name="contenu" class="single-textarea" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Votre message '" required></textarea>
                                 </div>
-
                                 <div class="mt-10">
                                      <input type="submit" class="submit_btn" value="Envorer">
                                 </div>
@@ -226,28 +226,17 @@
                         </div>
                     </div>
                     <div class="col-lg-6  col-md-12">
-                        <div class="single-footer-widget newsletter">
-                            <h4>Newsletter</h4>
-                            <p>Soyez informe de nos nouveaux produits et services.</p>
-                            <div id="mc_embed_signup">
-                                <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-
-                                    <div class="form-group row" style="width: 100%">
-                                        <div class="col-lg-8 col-md-12">
-                                            <input name="EMAIL" placeholder="Entrer l'email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email '" required="" type="email">
-                                            <div style="position: absolute; left: -5000px;">
-                                                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-12">
-                                            <button class="nw-btn primary-btn">Souscrire<span class="lnr lnr-arrow-right"></span></button>
-                                        </div>
-                                    </div>
-                                    <div class="info"></div>
-                                </form>
+                        <h3>New Letters</h3>
+                        <h4>Restez informe sur nos produits et sevices</h4>
+                         <form method="post" action="/newLetter">
+                            @csrf
+                            <div class="input-group">
+                                <input type="email" name="email" class="nw-btn" placeholder="Email" >
                             </div>
-                        </div>
+                            <div class="mt-10">
+                                <input type="submit" class="nw-btn primary-btn" value="Souscrire">
+                            </div>
+                        </form>
                     </div>
                     <div class="col-lg-3  col-md-12">
                         <div class="single-footer-widget">

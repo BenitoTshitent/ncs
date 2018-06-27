@@ -10,34 +10,18 @@
                         <table class="table">
                             <thead class="table">
                                 <tr class="table">
-                                    <th class="table">dasda</th>
-                                    <th class="table">dasda</th>
-                                    <th class="table">dasda</th>
+                                    <th class="table">Adresses mail</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="table">
-                                    <td>dddd</td>
-                                    <td>dddd</td>
-                                    <td>dddd</td>
-                                    <td><a href="#">Supprimer</a></td>
-                                </tr>
-                                <tr class="table">
-                                    <td>dddd</td>
-                                    <td>dddd</td>
-                                    <td>dddd</td>
-                                    <td><a href="#">Supprimer</a></td>
-                                </tr>
-                                <tr class="table">
-                                    <td>dddd</td>
-                                    <td>dddd</td>
-                                    <td>dddd</td>
-                                    <td><a href="#">Supprimer</a></td>
-                                </tr>
+                                @foreach($abonnes as $abonne)
+                                    <tr class="table" >
+                                        <td>{{$abonne['email']}}</td>
+                                        <td>{{$abonne['created_at']}}</td>
+                                        <td><a href="{{ route('destroyAbonne', $abonne['id']) }}">Supprimer</a></td>
+                                    </tr>
+                                @endforeach
                             </tbody>
-                            <tfoot>
-
-                            </tfoot>
                         </table>
                     </div>
                 </div>

@@ -10,43 +10,33 @@
                         <table class="table">
                             <thead class="table">
                             <tr class="table">
-                                <th class="table">dasda</th>
-                                <th class="table">dasda</th>
-                                <th class="table">dasda</th>
+                                <th class="table">Titre</th>
+                                <th class="table">Image</th>
+                                <th class="table">Description</th>
+                                <th class="table">Date</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr class="table">
-                                <td>dddd</td>
-                                <td>dddd</td>
-                                <td>dddd</td>
-                                <td><a href="#">Supprimer</a></td>
-                            </tr>
-                            <tr class="table">
-                                <td>dddd</td>
-                                <td>dddd</td>
-                                <td>dddd</td>
-                                <td><a href="#">Supprimer</a></td>
-                            </tr>
-                            <tr class="table">
-                                <td>dddd</td>
-                                <td>dddd</td>
-                                <td>dddd</td>
-                                <td><a href="#">Supprimer</a></td>
-                            </tr>
-                            </tbody>
-                            <tfoot>
+                            @foreach($services as $service)
+                                <tr>
+                                    <td>{{$service['titre']}}</td>
+                                    <td>{{$service['iconUrl']}}</td>
+                                    <td>{{$service['description']}}</td>
+                                    <td>{{$service['created_at']}}</td>
+                                    <td><a href="{{ route('destroyProduit', $service['id']) }}">Supprimer</a></td>
+                                </tr>
+                            @endforeach
 
-                            </tfoot>
+                            </tbody>
                         </table>
 
-                        <form method="POST" action="">
+                        <form method="POST" action="/newservice">
                             @csrf
                             <h3>Nouveau service</h3>
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Titre</label>
                                 <div class="col-md-6">
-                                    <input id="titre" type="text" class="form-control" name="titre" value="" required autofocus>
+                                    <input id="titre" type="text" class="form-control" name="titre" value="" required  >
                                 </div>
                             </div>
                             <div class="form-group row">
