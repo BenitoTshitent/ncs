@@ -17,7 +17,8 @@ class AcceuilController extends Controller
     }
     
     public function index(){
-
+        $welcomes=Acceuil::first();
+        return view('welcome', compact('welcomes'));
     }
 
     public function update(Request $request){

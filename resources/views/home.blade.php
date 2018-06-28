@@ -9,12 +9,12 @@
                 <div class="card-header">Acceuil</div>
                 <div class="card-body">
 
-                        <form method="POST" action="{{ route('home') }}">
+                        <form method="POST">
                             @csrf
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Logo </label>
                                 <div class="col-md-6">
-                                    <input id="logo" type="file" class="form-control" name="logo" value="" required >
+                                    <input id="logo" type="file" class="form-control" name="logo" value=""  >
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -32,10 +32,11 @@
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Image </label>
                                 <div class="col-md-6">
-                                    <input id="ImageAcc" type="file" class="form-control" name="ImageAcc" value="" required >
+                                    <input id="ImageAcc" type="file" class="form-control" name="ImageAcc" value="" >
                                 </div>
                             </div>
                             <input type="hidden" value="acceuil" name="checker">
+                            <input type="hidden" name="id" id="id" value="{{$acceuils['id']}}">
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
@@ -51,12 +52,12 @@
                 <div class="card-header">Apropos de nous</div>
                 <div class="card-body">
 
-                    <form method="POST" action="">
+                    <form method="POST" >
                         @csrf
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Image de fond</label>
                             <div class="col-md-6">
-                                <input id="imagefdApp" type="file" class="form-control" name="imagefdApp" value="" required >
+                                <input id="imagefdApp" type="file" class="form-control" name="imagefdApp" value="">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -72,6 +73,7 @@
                             </div>
                         </div>
                         <input type="hidden" value="apropos" name="checker">
+                        <input type="hidden" name="id" id="id" value="{{$acceuils['id']}}">
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -87,9 +89,8 @@
                 <div class="card-header">Nos contacts</div>
                 <div class="card-body">
 
-                    <form method="POST" action="{{ route('home') }}">
+                    <form method="POST">
                         @csrf
-
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Adresse mail</label>
                             <div class="col-md-6">
@@ -105,10 +106,11 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Numero 2</label>
                             <div class="col-md-6">
-                                <input id="num2TextContact" type="file" class="form-control" name="num2TextContact" value="{{$acceuils['num2TextContact']}}" required >
+                                <input id="num2TextContact" type="text" class="form-control" name="num2TextContact" value="{{$acceuils['num2TextContact']}}" required >
                             </div>
                         </div>
                         <input type="hidden" value="contacts" name="checker">
+                        <input type="hidden" name="id" id="id" value="{{$acceuils['id']}}">
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -124,7 +126,7 @@
                 <div class="card-header">Notre adresse</div>
                 <div class="card-body">
 
-                    <form method="POST" action="{{ route('home') }}">
+                    <form method="POST">
                         @csrf
 
                         <div class="form-group row">
@@ -146,6 +148,7 @@
                             </div>
                         </div>
                         <input type="hidden" value="adresse" name="checker">
+                        <input type="hidden" name="id" id="id" value="{{$acceuils['id']}}">
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -161,9 +164,8 @@
                 <div class="card-header">Roseaux sociaux</div>
                 <div class="card-body">
 
-                    <form method="POST" action="{{ route('home') }}">
+                    <form method="POST">
                         @csrf
-
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">FaceBook</label>
                             <div class="col-md-6">
@@ -183,6 +185,7 @@
                             </div>
                         </div>
                         <input type="hidden" value="reseauxsociaux" name="checker">
+                        <input type="hidden" name="id" id="id" value="{{$acceuils['id']}}">
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

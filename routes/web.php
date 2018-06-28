@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/','AcceuilController@index')->name('welcome');
 
 Route::get('/abonnes','AbonnesController@index')->name('abonnes');
 Route::get('/abonnes/{id}','AbonnesController@destroy')->name('destroyAbonne');

@@ -50,10 +50,10 @@
                 <div class="row fullscreen d-flex align-items-center justify-content-center">
                     <div class="banner-content col-lg-7">
                         <h1>
-                            Nous sommmes votre solution numeric
+                            {{$welcomes['primeTextAcc']}}
                         </h1>
                         <p class="pt-20 pb-20">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+                            {{$welcomes['secTextAcc']}}
                         </p>
                     </div>
                 </div>
@@ -133,8 +133,8 @@
                 <div class="row d-flex justify-content-center">
                     <div class="menu-content col-lg-9">
                         <div class="title text-center">
-                            <h1 class="mb-10 text-white">Ce que nous sommes </h1>
-                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            <h1 class="mb-10 text-white">{{$welcomes['enteteTextApp']}} </h1>
+                            <p class="text-white"> {{$welcomes['descTextApp']}}</p>
                             <a class="primary-btn" href="#">Request Free Demo</a>
                         </div>
                     </div>
@@ -186,19 +186,19 @@
                             <form action="" method="post">
                                 @csrf
                                 <div class="mt-10">
-                                    <input type="text" name="nomEntite" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nom de lEntite'" required class="single-input">
+                                    <input type="text" name="nomEntite" placeholder="Nom de l'entite" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nom de lEntite'" required class="single-input">
                                 </div>
                                 <div class="mt-10">
-                                    <input type="email" name="emailEntite" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'adesse mail'" required class="single-input">
+                                    <input type="email" name="emailEntite" placeholder="Adresse mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'adesse mail'" required class="single-input">
                                 </div>
                                 <div class="mt-10">
-                                    <input type="text" name="PhoneEntite" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'phone'" required class="single-input">
+                                    <input type="text" name="PhoneEntite" placeholder="Telephone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'phone'" required class="single-input">
                                 </div>
                                 <div class="mt-10">
-                                    <input type="text" name="sujetEntite" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'sujet'" required class="single-input">
+                                    <input type="text" name="sujetEntite" placeholder="Sujet" onfocus="this.placeholder = ''" onblur="this.placeholder = 'sujet'" required class="single-input">
                                 </div>
                                 <div class="mt-10">
-                                    <textarea name="contenu" class="single-textarea" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Votre message '" required></textarea>
+                                    <textarea name="contenu" class="single-textarea" placeholder="Votre message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Votre message '" required></textarea>
                                 </div>
                                 <div class="mt-10">
                                      <input type="submit" class="submit_btn" value="Envorer">
@@ -219,9 +219,9 @@
                         <div class="single-footer-widget">
                             <h6>Nos contacts</h6>
                             <p>
-                                <a href="mailto:#0">numeric@ncs.com</a><br>
-                                <span>+1 (917) 123 456 </span><br>
-                                <span>+1 (917) 333 987</span>
+                                <a href="mailto:#0"> {{$welcomes['emailTextContact']}}</a><br>
+                                <span> {{$welcomes['num1TextContact']}}</span><br>
+                                <span> {{$welcomes['num2TextContact']}}</span>
                             </p>
                         </div>
                     </div>
@@ -242,9 +242,9 @@
                         <div class="single-footer-widget">
                             <h4>Ou nous trouver</h4>
                             <p class="contact-address">
-                                1600 Amphitheatre Parkway<br>
-                                Mountain View, CA<br>
-                                94043 US
+                                {{$welcomes['numAvenenue']}}<br>
+                                {{$welcomes['villeCommune']}}<br>
+                                {{$welcomes['paysProv']}}
                             </p>
                         </div>
                     </div>
@@ -253,13 +253,12 @@
 
                 <div class="row footer-bottom d-flex justify-content-between">
                     <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
-                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> Designed<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">NumericSolution</a>
+                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> Designed<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="/" target="_blank">NumericSolution</a>
                      </p>
                     <div class="col-lg-4 col-sm-12 footer-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-behance"></i></a>
+                        <a href="{{$welcomes['facebook']}}"><i class="fa fa-facebook"></i></a>
+                        <a href="{{$welcomes['twitter']}}"><i class="fa fa-twitter"></i></a>
+                        <a href="{{$welcomes['instagram']}}"><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
