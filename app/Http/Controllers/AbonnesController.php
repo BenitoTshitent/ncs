@@ -24,6 +24,6 @@ class AbonnesController extends Controller
     public  function  destroy($id){
         $abonne=Abonnes::find($id);
         $abonne->delete();
-        return redirect('/aabonnes');
+        return redirect('/abonnes');
     }
 }

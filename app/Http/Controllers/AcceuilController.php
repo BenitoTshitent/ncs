@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Acceuil;
+use App\Produits;
+use App\services;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class AcceuilController extends Controller
 {
@@ -13,15 +16,17 @@ class AcceuilController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
-    }
+     }
     
     public function index(){
+        $services=services::all()->toArray();
+        $produits=Produits::all()->toArray();
         $welcomes=Acceuil::first();
-        return view('welcome', compact('welcomes'));
+        return view('welcome', compact('welcomes','services','produits'));
     }
 
-    public function update(Request $request){
+    public function store(Request $request){
 
+        return redirect('/test');
     }
 }

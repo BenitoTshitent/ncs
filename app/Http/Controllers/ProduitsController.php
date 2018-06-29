@@ -19,6 +19,7 @@ class ProduitsController extends Controller
 
     public function store( Request $request)
     {
+
         $data=$this->validate($request,[
           // 'image'=>'dimensions:max_width=100,max_height=100',
            'titre'=>'required',
@@ -28,20 +29,20 @@ class ProduitsController extends Controller
 
 
         if($request->image==null){
-            dd(Input::get());
-            redirect('/newproduct');
+           // dd($request);
+            redirect('/produits');
         }else{
              //$path=$request->file(Input::get('image'))->store('images');
-             $path = Storage::disk('local')->put('', $request->file('image'));
+            //dd($request->image);
+             $path = $request->file('image')->store('images');
              $pro=new Produits();
              $pro->saveProd($data,$path);
-             return redirect('/newproduct');
+             return redirect('/produits');
         }
-
     }
 
     public function destroy($id){
-        $pdt=Messages::find($id);
+        $pdt=Produits::find($id);
         $pdt->delete();
         redirect('/produits');
     }

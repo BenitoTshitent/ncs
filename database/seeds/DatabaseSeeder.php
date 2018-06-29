@@ -30,5 +30,34 @@ class DatabaseSeeder extends Seeder
             'twitter'=>'https://colorlib.com/',
             'instagram'=>'https://colorlib.com/',
         ]);
+
+        \App\Produits::create([
+            'imageUrl'=>'imageiamge',
+            'titre'=>'UZA BINTU',
+            'description'=>'Uza bintu est une plateforme de vente et achat oriente dans le blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+            'lien'=>'www.uzbintu.com'
+            ]);
+        \App\Produits::create(
+            [
+            'imageUrl'=>'imageiamge',
+            'titre'=>'SOS 243',
+            'description'=>'SOS 243 est une plateforme de vente et achat oriente dans le blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+            'lien'=>'www.sos243.com'
+        ]);
+
+        \App\services::create([
+            'iconUrl'=>'icon icon',
+            'titre'=>'Herbergement',
+            'description'=>'faites heberger vos applications web sur nos serveurs tres peformants'
+        ]); \App\services::create([
+            'iconUrl'=>'icon icon',
+            'titre'=>'Mail professionnel',
+            'description'=>'Nous gerons votre service de messagerie dentreprise '
+        ]);
+        \App\services::create([
+            'iconUrl'=>'icon icon',
+            'titre'=>'Installation camera',
+            'description'=>'blabl avla blab lavlablablavl ablabl   avlabla blavlablab lavlablablavlab lablavlablablavlablablavla '
+        ]);
     }
 }

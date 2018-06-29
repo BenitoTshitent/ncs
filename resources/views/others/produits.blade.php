@@ -32,7 +32,7 @@
                             </tbody>
                         </table>
 
-                        <form method="get" action="/newproduct" enctype="multipart/form-data">
+                        <form method="post" action="/newproduct" enctype="multipart/form-data">
                                 @csrf
                                 <h3> Nouveau produit</h3>
                                 <div class="form-group row">

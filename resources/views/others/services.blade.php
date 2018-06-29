@@ -23,14 +23,14 @@
                                     <td>{{$service['iconUrl']}}</td>
                                     <td>{{$service['description']}}</td>
                                     <td>{{$service['created_at']}}</td>
-                                    <td><a href="{{ route('destroyProduit', $service['id']) }}">Supprimer</a></td>
+                                    <td><a href="{{ route('destroyService', $service['id']) }}">Supprimer</a></td>
                                 </tr>
                             @endforeach
 
                             </tbody>
                         </table>
 
-                        <form method="POST" action="/newservice">
+                        <form method="POST" action="/newservice" enctype="multipart/form-data">
                             @csrf
                             <h3>Nouveau service</h3>
                             <div class="form-group row">

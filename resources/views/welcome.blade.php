@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="row align-items-center justify-content-between d-flex">
                     <div id="logo">
-                        <a href="index.html"><img src="{{asset('img/logo.png')}}" alt="" title="" /></a>
+                        <a href="index.html"><img src="{{url('storage/'.$welcomes['logo'])}}" alt="" title="" /></a>
                     </div>
                     <nav id="nav-menu-container">
                         <ul class="nav-menu">
@@ -45,7 +45,7 @@
         </header><!-- #header -->
 
         <!-- start banner Area -->
-        <section class="banner-area" id="home">
+        <section class="banner-area" id="home" style="background: url({{'storage/'.$welcomes['ImageAccUrl']}}) center;">
             <div class="container">
                 <div class="row fullscreen d-flex align-items-center justify-content-center">
                     <div class="banner-content col-lg-7">
@@ -73,61 +73,28 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="single-offer d-flex flex-row pb-30">
-                            <div class="icon">
-                                <img src="{{asset('img/s1.png')}}" alt="">
-                            </div>
-                            <div class="desc">
-                                <a href="#"><h4>Unlimited Colors</h4></a>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="single-offer d-flex flex-row pb-30">
-                            <div class="icon">
-                                <img src="{{asset('img/s3.png')}}" alt="">
-                            </div>
-                            <div class="desc">
-                                <a href="#"><h4>Endless Support</h4></a>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                                </p>
+                    @foreach($services as $service)
+                        <div class="col-lg-6">
+                            <div class="single-offer d-flex flex-row pb-30">
+                                <div class="icon">
+                                    <img src="{{url('storage/'.$service['iconUrl'])}}" alt="">
+                                </div>
+                                <div class="desc">
+                                    <a href="#"><h4>{{$service['titre']}}</h4></a>
+                                    <p>
+                                        {{$service['description']}}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="single-offer d-flex flex-row pb-30">
-                            <div class="icon">
-                                <img src="{{asset('img/s2.png')}}" alt="">
-                            </div>
-                            <div class="desc">
-                                <a href="#"><h4>Smart Security</h4></a>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="single-offer d-flex flex-row pb-30">
-                            <div class="icon">
-                                <img src="{{asset('img/s4.png')}}" alt="">
-                            </div>
-                            <div class="desc">
-                                <a href="#"><h4>Smart Security</h4></a>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
         <!-- End we-offer Area
 
           <!-- Start callto-action Area -->
-        <section class="callto-action-area relative section-gap">
+        <section class="callto-action-area relative section-gap" style=" background: url({{ url('storage/'.$welcomes['imagefdAppUrl']) }}) center;">
             <div class="overlay overlay-bg"></div>
             <div class="container">
                 <div class="row d-flex justify-content-center">
@@ -155,22 +122,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 single-blog">
-                        <img class="img-fluid" src="{{asset('img/b1.jpg')}}" alt="">
-                        <a href="#"><h4>UZA BINTU </h4></a>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
-                        </p>
-                        <p class="post-date">31st January, 2018</p>
-                    </div>
-                    <div class="col-lg-6 single-blog">
-                        <img class="img-fluid" src="img/b2.jpg" alt="">
-                        <a href="#"><h4>243 SOS</h4></a>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
-                        </p>
-                        <p class="post-date">31st January, 2018</p>
-                    </div>
+                    @foreach($produits as $produit)
+                        <div class="col-lg-6 single-blog">
+                            <img class="img-fluid" src="{{url('storage/'.$produit['imageUrl'])}}" alt="">
+                            <a href="{{$produit['lien']}}"><h4>{{$produit['titre']}}</h4></a>
+                            <p>
+                                {{$produit['description']}}
+                             </p>
+                         </div>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -231,7 +191,7 @@
                          <form method="post" action="/newLetter">
                             @csrf
                             <div class="input-group">
-                                <input type="email" name="email" class="nw-btn" placeholder="Email" >
+                                <input type="email" name="email" class="single-input " placeholder="Email" >
                             </div>
                             <div class="mt-10">
                                 <input type="submit" class="nw-btn primary-btn" value="Souscrire">

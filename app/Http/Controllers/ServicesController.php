@@ -21,15 +21,14 @@ class ServicesController extends Controller
             'description'=>'required'
         ]);
 
-        if($request->ico==null){
-
-            redirect('/newservices');
+        if($request->icon==null){
+            return redirect('/services');
         }else{
             //$path=$request->file(Input::get('image'))->store('images');
-            $path = Storage::disk('local')->put('', $request->file('ico'));
+            $path = $request->file('icon')->store('images');
             $service=new services();
-            $service->saveProd($data,$path);
-            return redirect('/newservices');
+            $service->saveService($data,$path);
+            return redirect('/services');
         }
 
     }
@@ -37,6 +36,6 @@ class ServicesController extends Controller
     public function destroy($id){
         $service=services::find($id);
         $service->delete();
-        redirect('/services');
+        return redirect('/services');
     }
 }

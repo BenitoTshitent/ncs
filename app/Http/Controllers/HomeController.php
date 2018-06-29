@@ -35,10 +35,12 @@ class HomeController extends Controller
 
             if($request->checker == 'acceuil'){
                 if($request->logo != null){
-                    $acceuil->logo=$request->logo;
+                    $path=$request->file('logo')->store('icons');
+                    $acceuil->logo=$path;
                 }
                 if($request->ImageAcc != null){
-                    $acceuil->ImageAccUrl=$request->ImageAcc;
+                    $path=$request->file('ImageAcc')->store('images');
+                    $acceuil->ImageAccUrl=$path;
                 }
                 $acceuil->primeTextAcc=$request->primeTextAcc;
                 $acceuil->secTextAcc=$request->secTextAcc;
@@ -46,7 +48,8 @@ class HomeController extends Controller
 
             }elseif ($request->checker == 'apropos'){
                 if($request->imagefdApp != null){
-                    $acceuil->imagefdAppUrl=$request->imagefdApp;
+                    $path=$request->file('imagefdApp')->store('images');
+                    $acceuil->imagefdAppUrl=$path;
                 }
                 $acceuil->enteteTextApp=$request->enteteTextApp;
                 $acceuil->descTextApp=$request->descTextApp;

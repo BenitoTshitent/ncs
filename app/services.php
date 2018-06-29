@@ -10,9 +10,9 @@ class services extends Model
       'iconUrl','titre','description'
     ];
 
-    public function saveService($data)
+    public function saveService($data,$path)
     {
-        $this->iconUrl=$data['icon'];
+        $this->iconUrl=$path;
         $this->titre=$data['titre'];
         $this->description=$data['description'];
         $this->save();
