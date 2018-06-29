@@ -14,10 +14,10 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         \App\Acceuil::create([
             'primeTextAcc'=>'Nous sommes votre solution numerique',
-            'logo'=>'logo',
+            'logo'=>'',
             'secTextAcc'=>'avec nous tous vos projects sont realises avec nous tous vos projects sont realises',
-            'ImageAccUrl'=>' image fond acceuil',
-            'imagefdAppUrl'=>'image de fond apropos',
+            'ImageAccUrl'=>'',
+            'imagefdAppUrl'=>'',
             'enteteTextApp'=>'texte dentete apropos',
             'descTextApp'=>'description apropos description apropos description apropos description apropos description apropos',
             'emailTextContact'=>'contact@numeric243.com',
@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             'instagram'=>'https://colorlib.com/',
         ]);
 
+        /*
         \App\Produits::create([
             'imageUrl'=>'imageiamge',
             'titre'=>'UZA BINTU',
@@ -58,6 +59,6 @@ class DatabaseSeeder extends Seeder
             'iconUrl'=>'icon icon',
             'titre'=>'Installation camera',
             'description'=>'blabl avla blab lavlablablavl ablabl   avlabla blavlablab lavlablablavlab lablavlablablavlablablavla '
-        ]);
+        ]);*/
     }
 }
